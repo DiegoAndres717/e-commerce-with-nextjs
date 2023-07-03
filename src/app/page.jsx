@@ -13,7 +13,7 @@ export default function Home() {
   const [items, setItems] = useState(null);
   const [filteredItems, setFilteredItems] = useState(null);
   const {data: session } = useSession()
-  console.log(session)
+
   useEffect(() => {
     fetchCards().then((data) => setItems(data));
   }, []);
