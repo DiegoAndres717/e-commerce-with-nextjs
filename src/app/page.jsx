@@ -12,7 +12,6 @@ export default function Home() {
   const context = useContext(ShoppiContext);
   const [items, setItems] = useState(null);
   const [filteredItems, setFilteredItems] = useState(null);
-  const {data: session } = useSession()
 
   useEffect(() => {
     fetchCards().then((data) => setItems(data));
@@ -76,16 +75,16 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex justify-center items-center relative w-80 mt-16">
-        <h1 className="font-bold text-xl">Exclusive products</h1>
+      <div className="relative flex items-center justify-center mt-16 w-80">
+        <h1 className="text-xl font-bold">Exclusive products</h1>
       </div>
       <input
         type="text"
         placeholder="Search a product"
-        className="rounded-lg border border-black w-80 p-4 mb-4 mt-3 focus:outline-none"
+        className="p-4 mt-3 mb-4 border border-black rounded-lg w-80 focus:outline-none"
         onChange={(e) => context.setSearchByTitle(e.target.value)}
       />
-      <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg mt-10">
+      <div className="grid w-full max-w-screen-lg gap-4 place-items-center mt-10 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {renderView()}
       </div>
       <ProductDetail />
