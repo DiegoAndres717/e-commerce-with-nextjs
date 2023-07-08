@@ -5,7 +5,6 @@ import CheckoutSide from "@/components/CheckoutSide/CheckoutSide";
 import { ProductDetail } from "@/components/Product/ProductDetail";
 import { ShoppiContext } from "@/components/context/Context";
 import { fetchCards } from "@/utils";
-import { useSession } from "next-auth/react";
 import { useContext, useEffect, useState } from "react";
 
 export default function Home() {
