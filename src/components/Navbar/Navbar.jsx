@@ -34,7 +34,7 @@ export default function Navbar() {
         </div>
         <LinkLeft classes={classes} active={active} toggle={toggle}/>
         <LinkRight classes={classes} active={active} toggle={toggle}/>
-        <div className="z-20 flex-1 md:block">
+        <div className="z-20 flex-1 md:block lg:z-0">
           <Link
             className="relative text-gray-700 transition-colors duration-300 transform hover:text-gray-600 md:flex md:justify-end"
             href="#"
